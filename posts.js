@@ -200,3 +200,5 @@ let postsArr = [
       "unde omnis voluptatem iure quasi maxime voluptas nam",
   },
 ];
+
+console.log(postsArr[0]);
