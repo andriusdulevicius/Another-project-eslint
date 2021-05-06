@@ -1,4 +1,4 @@
-let postsArr = [
+export let postsArr = [
   {
     userId: 3,
     id: 21,
