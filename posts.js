@@ -201,4 +201,4 @@ let postsArr = [
   },
 ];
 
-console.log(postsArr[0]);
+console.log(postsArr[0].body);
