@@ -1,3 +1,5 @@
+import { postsArr } from "./posts.js";
+
 function isItANumber(dalykas) {
   //   if (!isNaN(+dalykas)) {
   if (typeof +dalykas === "number" && !isNaN(dalykas)) {
@@ -15,4 +17,8 @@ export function getArticleIdFromButton(btnEl) {
   let id = btnEl.parentElement.dataset.id;
   if (!id) throw new Error("article id not found");
   return id;
+}
+
+export function getBodyTextFromId(id) {
+  return postsArr.find((postObj) => +id === postObj.id).body;
 }

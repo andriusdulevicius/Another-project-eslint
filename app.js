@@ -2,8 +2,9 @@
 
 import { postsArr } from "./Js/posts.js";
 import { generatePosts, generatePostElements } from "./Js/functions.js";
-import { getArticleIdFromButton } from "./Js/helperFunc.js";
+import { getArticleIdFromButton, getBodyTextFromId } from "./Js/helperFunc.js";
 
+// nuorodos i html el
 const postContainerEl = document.querySelector(".posts-container");
 const modalEl = document.querySelector(".modal");
 
@@ -23,6 +24,9 @@ postContainerEl.addEventListener("click", function (event) {
     modalEl.classList.toggle("open");
     let articleId = getArticleIdFromButton(event.target);
     // console.log(articleId);
+    let bodyText = getBodyTextFromId(articleId);
+    console.log("bodyText", bodyText);
+    // perkelti bodyText i modalo paragrafa
   }
 
   // uzeti klase modalui open arba nuimti jei tokia yra
