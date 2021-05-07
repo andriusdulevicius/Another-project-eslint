@@ -6,7 +6,7 @@ export function generatePosts(whereToPut) {
 
   postsArr.forEach((post) => {
     htmlArticleString += `
-      <article>
+      <article data-id=1 >
           <h3>${makeTextElipsis(post.title, 4)}</h3>
           <p>${makeTextElipsis(post.body, 7)}</p>
           <button class='open-modal'>Read more</button> 

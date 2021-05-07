@@ -14,12 +14,22 @@ generatePosts(postContainerEl);
 // uzdeti event listeneri ant viso posts el, ir klausyti kada paspaudem ant m
 // mygtuko
 postContainerEl.addEventListener("click", function (event) {
-  console.log("paspadem");
   console.log(event.target);
 
   // pasitikrinti ar paspaudem ant mygtuko
+  if (event.target.classList.contains("open-modal")) {
+    console.log("paspadem ant mygtuko");
+  }
 
   // uzeti klase modalui open arba nuimti jei tokia yra
 
   // uzpildyti modala su duomenimis is to posto ant kurio paspausta
+
+  // gauti ant kurio post mes paspaudem
+
+  // tarp postArr paieskoti posto su tuo id
+
+  // paimti is to posto body texta
+
+  // ir tuo tekstu uzpildyti modalo paragrafa
 });

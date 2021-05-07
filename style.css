@@ -18,6 +18,9 @@ article {
   padding: 1em;
   flex-basis: 30%;
 }
+article:hover {
+  background-color: #f1f1f1;
+}
 
 .modal {
   display: none;

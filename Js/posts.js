@@ -2,7 +2,7 @@ export let postsArr = [
   {
     userId: 3,
     id: 21,
-    title: "asperiores ea ipsam voluptatibus modi minima quia sint",
+    title: "To do stuff",
     body:
       "repellat aliquid praesentium dolorem quo\n" +
       "sed totam minus non itaque\n" +
