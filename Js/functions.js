@@ -16,3 +16,23 @@ export function generatePosts(whereToPut) {
   });
   whereToPut.innerHTML = htmlArticleString;
 }
+
+export function generatePostElements(whereToPut) {
+  postsArr.forEach((post) => {
+    const newArticle = document.createElement("article");
+
+    const newTitle = document.createElement("h3");
+    newTitle.textContent = makeTextElipsis(post.title, 4);
+
+    const p = document.createElement("p");
+    p.textContent = makeTextElipsis(post.body, 7);
+
+    const newButton = document.createElement("button");
+    newButton.className = "open-modal";
+    newButton.textContent = "Read more";
+    // newButton.addEventListener("click", toggleModal);
+
+    newArticle.append(newTitle, p, newButton);
+    whereToPut.appendChild(newArticle);
+  });
+}
