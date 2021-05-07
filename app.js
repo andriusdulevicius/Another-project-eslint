@@ -1,10 +1,11 @@
 "use strict"; // here we go again
 
 import { postsArr } from "./Js/posts.js";
-import { makeTextElipsis } from "./Js/helperFunc.js";
 import { generatePosts, generatePostElements } from "./Js/functions.js";
+import { getArticleIdFromButton } from "./Js/helperFunc.js";
 
 const postContainerEl = document.querySelector(".posts-container");
+const modalEl = document.querySelector(".modal");
 
 console.log(postsArr);
 
@@ -19,6 +20,9 @@ postContainerEl.addEventListener("click", function (event) {
   // pasitikrinti ar paspaudem ant mygtuko
   if (event.target.classList.contains("open-modal")) {
     console.log("paspadem ant mygtuko");
+    modalEl.classList.toggle("open");
+    let articleId = getArticleIdFromButton(event.target);
+    // console.log(articleId);
   }
 
   // uzeti klase modalui open arba nuimti jei tokia yra

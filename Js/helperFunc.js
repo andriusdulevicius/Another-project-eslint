@@ -10,3 +10,9 @@ function isItANumber(dalykas) {
 export function makeTextElipsis(text, howManyWords = 5) {
   return text.split(" ").slice(0, howManyWords).join(" ") + "...";
 }
+
+export function getArticleIdFromButton(btnEl) {
+  let id = btnEl.parentElement.dataset.id;
+  if (!id) throw new Error("article id not found");
+  return id;
+}

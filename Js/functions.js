@@ -6,7 +6,7 @@ export function generatePosts(whereToPut) {
 
   postsArr.forEach((post) => {
     htmlArticleString += `
-      <article data-id=1 >
+      <article data-id=${post.id} >
           <h3>${makeTextElipsis(post.title, 4)}</h3>
           <p>${makeTextElipsis(post.body, 7)}</p>
           <button class='open-modal'>Read more</button> 
@@ -20,6 +20,7 @@ export function generatePosts(whereToPut) {
 export function generatePostElements(whereToPut) {
   postsArr.forEach((post) => {
     const newArticle = document.createElement("article");
+    newArticle.dataset.id = 1;
 
     const newTitle = document.createElement("h3");
     newTitle.textContent = makeTextElipsis(post.title, 4);
