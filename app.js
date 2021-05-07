@@ -1,37 +1,21 @@
 "use strict"; // here we go again
 
-import { postsArr } from "./posts.js";
+import { postsArr } from "./Js/posts.js";
+import { makeTextElipsis } from "./Js/helperFunc.js";
+import { generatePosts } from "./Js/functions.js";
 
 const postContainerEl = document.querySelector(".posts-container");
 
 console.log(postsArr);
 
-let htmlArticleString = "";
+generatePosts(postContainerEl);
 
-postsArr.forEach((post) => {
-  htmlArticleString += `
-    <article>
-        <h3>${makeTextElipsis(post.title, 4)}</h3>
-        <p>${makeTextElipsis(post.body, 7)}</p>
-        <button>Read more</button> 
-        <span>userId: ${post.userId}</span>
-    </article>
-    `;
+// uzdeti event listeneri ant viso posts el, ir klausyti kada paspaudem ant m
+// mygtuko
+postContainerEl.addEventListener("click", function (event) {
+  console.log("paspadem");
+
+  // pasitikrinti ar paspaudem ant mygtuko
+
+  // uzeti klase modalui open arba nuimti jei tokia yra
 });
-
-postContainerEl.innerHTML = htmlArticleString;
-
-function makeTextElipsis(text, howManyWords = 5) {
-  return text.split(" ").slice(0, howManyWords).join(" ") + "...";
-}
-
-function isItANumber(dalykas) {
-  if (!isNaN(+dalykas)) {
-    console.log("skaicius");
-  } else {
-    console.log("neskaicius");
-  }
-}
-
-isItANumber("kazkas");
-isItANumber("    15  ");

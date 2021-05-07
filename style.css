@@ -18,3 +18,22 @@ article {
   padding: 1em;
   flex-basis: 30%;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  width: 70%;
+  background: white;
+  border: 1px solid #000;
+  border-radius: 1em;
+  padding: 1em;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal.open {
+  display: block;
+}
+.modal h2 {
+  font-size: 2em;
+}
