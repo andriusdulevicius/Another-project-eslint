@@ -1,12 +1,12 @@
-"use strict"; // here we go again
+// here we go again
 
-import { postsArr } from "./Js/posts.js";
-import { generatePosts, generatePostElements } from "./Js/functions.js";
-import { getArticleIdFromButton, getBodyTextFromId } from "./Js/helperFunc.js";
+import { postsArr } from './Js/posts.js';
+import { generatePosts, generatePostElements } from './Js/functions.js';
+import { getArticleIdFromButton, getBodyTextFromId } from './Js/helperFunc.js';
 
 // nuorodos i html el
-const postContainerEl = document.querySelector(".posts-container");
-const modalEl = document.querySelector(".modal");
+const postContainerEl = document.querySelector('.posts-container');
+const modalEl = document.querySelector('.modal');
 
 console.log(postsArr);
 
@@ -15,17 +15,17 @@ generatePosts(postContainerEl);
 
 // uzdeti event listeneri ant viso posts el, ir klausyti kada paspaudem ant m
 // mygtuko
-postContainerEl.addEventListener("click", function (event) {
+postContainerEl.addEventListener('click', (event) => {
   console.log(event.target);
 
   // pasitikrinti ar paspaudem ant mygtuko
-  if (event.target.classList.contains("open-modal")) {
-    console.log("paspadem ant mygtuko");
-    modalEl.classList.toggle("open");
-    let articleId = getArticleIdFromButton(event.target);
+  if (event.target.classList.contains('open-modal')) {
+    console.log('paspadem ant mygtuko');
+    modalEl.classList.toggle('open');
+    const articleId = getArticleIdFromButton(event.target);
     // console.log(articleId);
-    let bodyText = getBodyTextFromId(articleId);
-    console.log("bodyText", bodyText);
+    const bodyText = getBodyTextFromId(articleId);
+    console.log('bodyText', bodyText);
     // perkelti bodyText i modalo paragrafa
   }
 
