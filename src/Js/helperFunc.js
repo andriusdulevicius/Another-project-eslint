@@ -1,12 +1,11 @@
-import { postsArr } from './posts.js';
+import postsArr from './posts.js';
 
-function isItANumber(dalykas) {
+export function isItANumber(dalykas) {
   //   if (!isNaN(+dalykas)) {
-  if (typeof +dalykas === 'number' && !isNaN(dalykas)) {
-    console.log('skaicius');
-  } else {
-    console.log('neskaicius');
+  if (typeof +dalykas === 'number' && !Number.isNaN(dalykas)) {
+    return 'Skaicius';
   }
+  return 'Neskaicius';
 }
 
 export function makeTextElipsis(text, howManyWords = 5) {

@@ -1,4 +1,4 @@
-import { postsArr } from './posts.js';
+import postsArr from './posts.js';
 import { makeTextElipsis } from './helperFunc.js';
 
 /**

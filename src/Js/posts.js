@@ -1,4 +1,4 @@
-export const postsArr = [
+const postsArr = [
   {
     userId: 3,
     id: 21,
@@ -201,4 +201,4 @@ export const postsArr = [
   },
 ];
 
-console.log(postsArr[0].body);
+export default postsArr;
