@@ -1,6 +1,10 @@
 import { postsArr } from './posts.js';
 import { makeTextElipsis } from './helperFunc.js';
 
+/**
+ *
+ * @param {HTMLElement} whereToPut
+ */
 export function generatePosts(whereToPut) {
   let htmlArticleString = '';
 
@@ -14,7 +18,7 @@ export function generatePosts(whereToPut) {
       </article>
       `;
   });
-  whereToPut.innerHTML = htmlArticleString;
+  whereToPut.insertAdjacentHTML('afterbegin', htmlArticleString);
 }
 
 export function generatePostElements(whereToPut) {
