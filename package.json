@@ -1,0 +1,26 @@
+{
+  "name": "js3_posts_gen_js",
+  "version": "1.0.0",
+  "description": "1. Is masyvo paimti kiekviena el ir sukurti html straipsni    kuriame butu visi duomenys 2. Padaryti kad posto paragrafe atsivaizduotu sutrumpinta 5 zodziu versija su gale pridetu \"...\" 3. kiekvienam el sukurti mygtuka read more, paspaudus mygtuka atsidaro modalas kuriame yra pilnas tekstas ir didesnis tekstas",
+  "main": "app.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/js/helperFunc.js",
+    "fix": "./node_modules/.bin/eslint src --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariusCodeAcademy/js3_PostsGenJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariusCodeAcademy/js3_PostsGenJs/issues"
+  },
+  "homepage": "https://github.com/MariusCodeAcademy/js3_PostsGenJs#readme",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.3"
+  }
+}

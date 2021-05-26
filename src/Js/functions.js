@@ -1,8 +1,12 @@
-import { postsArr } from "./posts.js";
-import { makeTextElipsis } from "./helperFunc.js";
+import { postsArr } from './posts.js';
+import { makeTextElipsis } from './helperFunc.js';
 
+/**
+ *
+ * @param {HTMLElement} whereToPut
+ */
 export function generatePosts(whereToPut) {
-  let htmlArticleString = "";
+  let htmlArticleString = '';
 
   postsArr.forEach((post) => {
     htmlArticleString += `
@@ -14,23 +18,23 @@ export function generatePosts(whereToPut) {
       </article>
       `;
   });
-  whereToPut.innerHTML = htmlArticleString;
+  whereToPut.insertAdjacentHTML('afterbegin', htmlArticleString);
 }
 
 export function generatePostElements(whereToPut) {
   postsArr.forEach((post) => {
-    const newArticle = document.createElement("article");
+    const newArticle = document.createElement('article');
     newArticle.dataset.id = 1;
 
-    const newTitle = document.createElement("h3");
+    const newTitle = document.createElement('h3');
     newTitle.textContent = makeTextElipsis(post.title, 4);
 
-    const p = document.createElement("p");
+    const p = document.createElement('p');
     p.textContent = makeTextElipsis(post.body, 7);
 
-    const newButton = document.createElement("button");
-    newButton.className = "open-modal";
-    newButton.textContent = "Read more";
+    const newButton = document.createElement('button');
+    newButton.className = 'open-modal';
+    newButton.textContent = 'Read more';
     // newButton.addEventListener("click", toggleModal);
 
     newArticle.append(newTitle, p, newButton);
